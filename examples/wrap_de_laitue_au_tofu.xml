@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xslt-param name="css" select="'../recipe.css'"?>
+<?xml-stylesheet type="text/xsl" href="../breezipe-xhtml.xsl"?>
+<recipe
+    xml:lang="fr-CA"
+    xmlns="http://jabarsz.cz/Breezipe"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jabarsz.cz/Breezipe
+                        ../breezipe.xsd">
+
+  <name>Wraps de laitue au tofu épicé (façon Joey's)</name>
+
+  <step short="Ré-hydrater" id="champis">
+    Ré-hydrater des <ingredient quantity="1"
+    unit="poignée">champignons séchés</ingredient> en les recouvrant
+    d'eau bouillante pour une dizaine de minutes.
+  </step>
+
+  <step short="Mélanger" id="sauce">
+    Préparer la sauce en mélangeant dans un bol la <ingredient
+    quantity="3" unit="c. à soupe">sauce soya</ingredient>, le
+    <ingredient quantity="2" unit="c. à soupe">vinaigre de
+    riz</ingredient>, l’<ingredient quantity="1" unit="c. à thé">huile
+    de sésame</ingredient> et la <ingredient quantity="1" unit="c. à
+    thé">sauce piquante Gochujang</ingredient>.
+  </step>
+
+  <step short="Presser" id="tofu">
+    Presser le <ingredient quantity="1" unit="bloc">tofu</ingredient>
+    et le déchirer en petits morceaux.
+  </step>
+
+  <step short="Dorer" id="tofu-dore">
+    Faire chauffer l'<ingredient quantity="2" unit="c. à soupe">huile
+    de canola</ingredient> dans le wok. Ajouter le <ref r="tofu">tofu
+    morcelé</ref> et le faire frire jusqu'à ce qu'il soit adéquatement
+    doré et croustillant en surface. Réserver le tofu doré dans un
+    bol.
+  </step>
+
+  <step short="Dorer" id="aromates">
+    Dans le wok chaud, dorer les <group><name>aromates</name>: d'abord
+    les <ingredient
+    quantity="2">échalotes<note>coupées</note></ingredient> pour
+    quelques minutes, puis ajouter l'<ingredient quantity="1"
+    unit="gousse">ail <note>pressé</note></ingredient> et le
+    <ingredient quantity="1" unit="c. à thé">gingembre frais
+    <note>râpé à la microplane</note></ingredient></group>.
+  </step>
+
+  <step short="Ajouter" id="wok">
+    Pendant que les aromates finissent de dorer, égouter et hacher les
+    <ref r="champis">champignons ré-hydratés</ref> en petits morceaux,
+    puis les ajouter au <ref r="aromates">wok</ref> et les dorer.
+  </step>
+
+  <step short="Mélanger" id="melange">
+    Ajouter le <ref r="tofu-dore">tofu</ref> et la <ref r="sauce" />
+    dans le <ref r="wok" />. Bien mélanger et réchauffer le tout.
+  </step>
+
+  <step short="Griller" id="arachides">
+    Faire griller les <ingredient quantity="1"
+    unit="poignée">arachides</ingredient> dans une petite poêle.
+  </step>
+  
+  <step short="Assembler">
+    Disposer la <ingredient quantity="3" unit="feuilles par
+    personne">laitue <note>lavée</note></ingredient> dans les
+    assiettes, y déposer le <ref r="melange">mélange</ref> et garnir:
+    <group name="garnitures"><ingredient>nouilles chow-mein
+    croustillantes</ingredient>, <ingredient quantity="1">carotte
+    <note>rapée</note></ingredient>,
+    <ingredient>mayonnaise à la sriracha</ingredient>,
+    <ingredient>assaisonnement chili crisp</ingredient></group> et
+    <ref r="arachides">arachides grillées</ref>.
+  </step>
+
+  <!-- <xhtml:p>This recipe is adapted from <xhtml:a -->
+  <!-- href="https://www.ricardocuisine.com/en/recipes/5346-blueberry-muffins">Ricardo's</xhtml:a>.</xhtml:p> -->
+
+</recipe>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xslt-param name="css" select="'../recipe.css'"?>
+<?xml-stylesheet type="text/xsl" href="../breezipe-xhtml.xsl"?>
+<recipe
+    xml:lang="en-CA"
+    xmlns="http://jabarsz.cz/Breezipe"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jabarsz.cz/Breezipe
+                        ../breezipe.xsd">
+
+  <name>Blueberry yogurt muffins</name>
+
+  <step id="preheated" short="Pre-heat">
+    Pre-heat oven to 350°F (180°C).
+  </step>
+
+  <step id="dry" name="dry mix" short="Mix">
+    Combine and mix the <group><name>dry ingredients</name>:
+    <ingredient quantity="1 ½" unit="cups">flour</ingredient>,
+    <ingredient quantity="1" unit="cup" note="100g">rolled
+    oats</ingredient>, <ingredient quantity="1" unit="cup"
+    note="200g">sugar</ingredient>, <ingredient quantity="2"
+    unit="tsp">baking powder</ingredient> and <ingredient quantity="½"
+    unit="tsp">salt</ingredient></group>.
+  </step>
+
+  <step id="wet" name="wet mix" short="Whisk">
+    Combine and whisk the <group><name>wet ingredients</name>:
+    <ingredient quantity="1" unit="cup">yogurt</ingredient>,
+    <ingredient note="e.g. canola or grape seed" quantity="½"
+    unit="cup">vegetable oil</ingredient>, <ingredient
+    quantity="2">eggs</ingredient> and <ingredient quantity="1"
+    unit="tsp">vanilla</ingredient></group>.
+  </step>
+
+  <step id="batter" short="Stir">
+    Stir the <ref r="dry" /> into the <ref r="wet" />.
+  </step>
+
+  <step id="blueberried_batter" name="batter" short="Add">
+    Gently fold the <ingredient quantity="1 ¾" unit="cup">frozen
+    blueberries</ingredient> into the <ref r="batter" />.
+  </step>
+
+  <step id="muffins" short="Portion">
+    Portion the <ref r="blueberried_batter" /> into 12 silicone muffin
+    cups.
+  </step>
+
+  <step short="Bake">
+    In the <ref r="preheated">pre-heated oven</ref>, bake the <ref
+    r="muffins" /> for about 25 minutes.
+  </step>
+
+  <xhtml:p>This recipe is adapted from <xhtml:a
+  href="https://www.ricardocuisine.com/en/recipes/5346-blueberry-muffins">Ricardo's</xhtml:a>.</xhtml:p>
+
+</recipe>

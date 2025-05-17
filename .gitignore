@@ -1,0 +1,6 @@
+*~
+*.valid
+*.xhtml-valid
+catalog.xml
+xsd/*
+examples/*.xhtml

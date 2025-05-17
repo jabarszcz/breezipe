@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../breezipe-xhtml.xsl"?>
+<recipe
+    xml:lang="en-CA"
+    xmlns="http://jabarsz.cz/Breezipe"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jabarsz.cz/Breezipe
+                        ../breezipe.xsd">
+
+  <name>Kombucha (first fermentation)</name>
+
+  <step id="quasifulljar" short="Measure">
+    Fill a ~4L glass jar with <ingredient quantity="3.75"
+    unit="L">water</ingredient>, leaving space for an additional cup
+    of liquid.
+  </step>
+
+  <step id="pot" short="Pour">
+    Pour about 1.5L of <ref r="quasifulljar">water from the glass
+    jar</ref> to a 3L pot. Set aside the <result id="water-jar">now
+    half-full jar</result>.
+  </step>
+
+  <step id="heating" short="Heat">
+     Put the <ref r="pot" /> on high heat.
+  </step>
+
+  <step id="infusion" short="Infuse">
+    Add <ingredient quantity="6" unit="tbs">black tea
+    leaves<note>e.g. Earl Grey</note></ingredient> to the <ref
+    r="heating">heating water</ref>, mix and bring to a simmer, then
+    leave off the heat for 10 minutes for the tea to infuse.
+  </step>
+
+  <step id="cool" short="Cool">
+    Cool down the <ref r="infusion" /> by diluting it with <ref
+    r="water-jar" quantity="1" unit="L" note="approx.">cold water from
+    the jar</ref>. Set aside the <result id="non-empty-jar">jar with
+    remaining water</result> (leave at least a few cups to minimize
+    the thermal shock to the glass jar later).
+  </step>
+
+  <step id="tea_jar" short="Filter">
+    Pour the <ref r="cool">infused and cooled tea</ref> back into the
+    <ref r="non-empty-jar" />, through a sieve to catch the few
+    floating leaves. Most of the tea leaves usually stay at the bottom
+    my pot.
+  </step>
+
+  <step id="sweet_tea" short="Sweeten">
+    Add <ingredient quantity="1" unit="cup"
+    note="200g">sugar</ingredient> to the <ref r="tea_jar">tea
+    jar</ref> and mix until it dissolves completely.
+  </step>
+
+  <step id="inoculated" short="Pitch SCOBY">
+    After making sure that the <ref r="sweet_tea">sweet tea</ref> is
+    not hotter than 40°C, pour and stir in a starter culture of
+    <ingredient quantity="1" unit="cup">raw kombucha<note>i.e. not
+    pasteurized</note></ingredient>, either from a previous batch or a
+    bottle of raw kombucha from the store. Note that the SCOBY is the
+    culture of bacteria and yeast that live in the unpasteurized
+    kombucha, not the pellicle that can form on top of the liquid.
+  </step>
+
+  <step short="Ferment">
+    Cover the jar with a cloth and leave the <ref
+    r="inoculated">inoculated sweet tea</ref> in a dark place, ideally
+    between 20°C and 25°C. A pellicle should form at the top in the
+    following days and some bubbles may get trapped underneath, but do
+    regularly make sure that the culture is not colonised by other
+    organisms: it should have a pleasant smell, and no fuzzy patches
+    on the surface.  Ferment to preference, until the brew has
+    acidified and consumed enough sugar.
+
+    <xhtml:p>I've measured the sugar content with a refractometer and
+    my brew starts at 6-7% and I wait until 3.5% for the second
+    fermentation.</xhtml:p>
+  </step>
+
+</recipe>

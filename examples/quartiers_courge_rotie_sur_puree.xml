@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xslt-param name="css" select="'../recipe.css'"?>
+<?xml-stylesheet type="text/xsl" href="../breezipe-xhtml.xsl"?>
+<recipes xml:lang="fr-CA"
+         xmlns="http://jabarsz.cz/Breezipe"
+         xmlns:xhtml="http://www.w3.org/1999/xhtml"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://jabarsz.cz/Breezipe
+         ../breezipe.xsd">
+
+  <recipe id="courge-rotie">
+    <name>Courge rôtie</name>
+
+    <step id="prechauffer" short="Préchauffer">
+      Préchauffer le four à 375 °F et placer la grille au centre.
+    </step>
+
+    <step id="courge" short="Disposer">
+      Disposer la <ingredient quantity="1">courge
+      Buttercup<note>coupée en quartiers</note></ingredient> sur une
+      plaque de cuisson recouverte de papier parchemin.
+    </step>
+
+    <step id="garnie" short="Garnir">
+      Dans un bol, mélanger la <ingredient quantity="1"
+      unit="tasse">chapelure panko</ingredient>, le <ingredient
+      quantity="⅓" unit="tasse">beurre
+      <note>ramolli</note></ingredient>, des <ingredient quantity="1"
+      unit="c. à soupe">herbes au choix <note>ex. origan,
+      persil</note></ingredient>, et saler/poiver au goût. Étaler ce
+      mélange sur la surface des <ref r="courge">quartiers de
+      courge</ref>.
+    </step>
+
+    <step short="Cuire">
+      <ref r="prechauffer">Enfourner</ref> la <ref r="garnie">courge
+      garnie</ref> pendant 30-35 minutes jusqu'à ce qu'elle soit
+      tendre et légèrement dorée.
+    </step>
+  </recipe>
+
+  <recipe id="sauce">
+    <name>Sauce au vinaigre balsamique, oignons et champignons</name>
+
+    <xhtml:p>Cette partie peut être faite d'avance et réchauffée.</xhtml:p>
+
+    <step id="huile" short="Chauffer">
+      Faire chauffer <ingredient quantity="2" unit="c. à soupe">huile
+      végétale</ingredient> dans une poêle à feu moyen.
+    </step>
+
+    <step id="oignon" short="Dorer">
+      <ref r="huile">Y</ref> ajouter l'<ingredient
+      quantity="1">oignon<note>haché</note></ingredient> et
+      l'<ingredient quantity="1"
+      unit="gousse">ail<note>pressé</note></ingredient>, et faire
+      revenir environ 10 minutes ou jusqu'à ce que l'oignon soit doré.
+    </step>
+
+    <step id="bouillon" short="Bouillir">
+      Pendant que l'oignon cuit, bouillir de l'<ingredient
+      quantity="1" unit="tasse">eau</ingredient> et y incorporer une
+      <ingredient quantity="1" unit="c. à thé">base à
+      bouillon<note>ex. Better than Bouillon</note></ingredient>.
+    </step>
+
+    <step id="champignons" short="Ajouter">
+      Ajouter les <ingredient quantity="2"
+      unit="tasses">champignons<note>émincés</note></ingredient> dans
+      la <ref r="oignon">poêle</ref>, et poursuivre la cuisson environ
+      10 minutes en remuant régulièrement.
+    </step>
+
+    <step id="deglace" short="Déglacer">
+      Verser le <ingredient quantity="¼" unit="tasse">vinaigre
+      balsamique</ingredient> dans la <ref
+      r="champignons">poêle</ref> et laisser réduire de moitié
+      pendant environ 5 minutes.
+    </step>
+
+    <step short="Épaissir">
+      Délayer la <ingredient quantity="1" unit="c. à thé">fécule de
+      maïs</ingredient> avec un peu du <ref r="bouillon"/>. Ensuite,
+      verser la fécule délayée et le reste du bouillon dans la <ref
+      r="deglace">poêle</ref>. Porter à ébullition puis cuire
+      10-15 minutes pour que ça épaississe. Assaisonner.
+    </step>
+  </recipe>
+
+  <recipe id="puree">
+    <name>Purée de haricots blancs et crème</name>
+
+    <xhtml:p>Cette partie peut être faite d'avance et réchauffée.</xhtml:p>
+
+    <step id="creme-chaude" short="Chauffer">
+      Faire chauffer <ingredient quantity="½"
+      unit="tasse">crème</ingredient> dans une casserole à feu moyen.
+    </step>
+
+    <step id="melange-a-puree" short="Ajouter">
+      <ref r="creme-chaude">Y</ref> ajouter <ingredient quantity="1"
+      unit="boîte de 540 ml">haricots blancs</ingredient>, <ingredient
+      quantity="½" unit="tasse">fromage gouda
+      fumé<note>râpé</note></ingredient>, puis saler/poivrer au goût.
+    </step>
+
+    <step short="Pied-mélanger">
+      Réduire <ref r="melange-a-puree">le tout</ref> en purée à l'aide
+      d'un pied-mélangeur.
+    </step>
+  </recipe>
+
+  <recipe id="salade">
+    <name>Salade croquante</name>
+
+    <step short="Mélanger">
+      Dans un grand bol, combiner <ingredient quantity="2"
+      unit="tasses">choux de
+      Bruxelles<note>effeuillés</note></ingredient>, <ingredient
+      quantity="1">oignon vert<note>émincé</note></ingredient>,
+      <ingredient quantity="2" unit="c. à soupe">crème
+      sûre</ingredient>, <ingredient quantity="1" unit="c. à
+      soupe">jus de citron</ingredient>, <ingredient quantity="1"
+      unit="c. à soupe">miel<note>ou sirop
+      d'érable</note></ingredient> et <ingredient quantity="2"
+      unit="c. à soupe">pacanes<note>rôties et
+      concassées</note></ingredient>. Assaisonner et bien mélanger.
+    </step>
+  </recipe>
+
+  <recipe>
+    <name>Quartiers de courge rôtis sur purée de haricots blancs</name>
+
+    <step short="Assembler">
+      Sur chaque assiette, déposer une couche de <ref
+      r="puree">purée</ref>, former un nid et y verser généreusement
+      la <ref r="sauce">sauce</ref>. Déposer quelques <ref
+      r="courge-rotie">quartiers de courge rôtie</ref> dessus, puis
+      parsemer de <ref r="salade">salade</ref>.
+    </step>
+  </recipe>
+
+  <xhtml:p>Recette tirée de <xhtml:a
+  href="https://www.troisfoisparjour.com/fr/recettes/plats-principaux/legumineuses/quartiers-de-courge-rotis-sur-puree-de-haricots-blancs/">
+  Trois fois par jour</xhtml:a>.</xhtml:p>
+</recipes>

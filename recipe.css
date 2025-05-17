@@ -1,0 +1,97 @@
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2ch;
+    align-items: center;
+}
+
+.section {
+    min-width: 30ch;
+    max-width: 70ch;
+    margin: 0 auto;
+    flex: 1;
+}
+
+tr td:nth-child(1) {
+    text-align: right;
+    padding-right: 0.5em;
+}
+
+th {
+    text-align: center;         /* For merged cells */
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tbody {
+    border-bottom: 1px solid black;
+}
+
+.step {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+td a.ingredient {
+    text-decoration: none;
+}
+
+td a.ingredient:hover , td a.ingredient:focus {
+    text-decoration: underline;
+}
+
+/* Step-table */
+
+.step-table {
+    min-width: 50ch;
+}
+
+.step-table td , .step-table th {
+    min-width: 2ch;
+}
+
+.step-table td a.ingredient {
+    font-weight: bold;
+}
+
+.table-step {
+    border: 1px solid black;
+}
+
+.vertical-text {
+    writing-mode: sideways-lr;
+    text-orientation: mixed;
+    white-space: nowrap;
+}
+
+/* Links and cross-references */
+
+a.internal {
+  color: black;
+}
+
+a.internal:focus,
+a.internal:hover {
+  color: darkred;
+}
+
+:target {
+    background: color-mix(in srgb, darkred 20%, transparent);
+}
+
+.crossrefd:hover, .crossrefd-focus {
+    background-color: rgba(0,0,0,.1);
+}
+

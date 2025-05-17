@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xslt-param name="css" select="'../recipe.css'"?>
+<?xml-stylesheet type="text/xsl" href="../breezipe-xhtml.xsl"?>
+<recipe
+    xml:lang="en-CA"
+    xmlns="http://jabarsz.cz/Breezipe"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jabarsz.cz/Breezipe
+                        ../breezipe.xsd">
+
+  <name>Red Lentil Dahl</name>
+
+  <step id="hot-pan" short="Heat">
+    Heat <ingredient quantity="1" unit="teaspoon">olive
+    oil</ingredient> (or coconut oil) in a large pan over medium heat.
+  </step>
+
+  <step id="cook-onion" short="Brown">
+    Add <ingredient quantity="2">onions<note>diced</note></ingredient>
+    to the <ref r="hot-pan">hot pan</ref> and cook gently for 5
+    minutes.
+  </step>
+
+  <step id="add-aromatics" short="Aromatize">
+    Add the <group><name>aromatics</name>: <ingredient
+    quantity="3">garlic cloves<note>pressed</note></ingredient>,
+    <ingredient quantity="1" unit="tablespoon">fresh
+    ginger<note>peeled and grated</note></ingredient> and <ingredient
+    quantity="½" unit="">red chilli<note>finely
+    chopped</note></ingredient></group> to the <ref
+    r="cook-onion">pan</ref> and sauté for a few minutes. The red
+    chilli can be replaced by ½ tsp of dried chilli flakes.
+  </step>
+
+  <step id="toast-spices" short="Toast spices">
+    Add the <group><name>spices</name>: <ingredient quantity="½"
+    unit="teaspoon">cumin seeds<note>freshly
+    ground</note></ingredient>, <ingredient quantity="½"
+    unit="teaspoon">coriander seeds<note>freshly
+    ground</note></ingredient>, <ingredient quantity="½"
+    unit="teaspoon">mustard seeds<note>freshly
+    ground</note></ingredient>, <ingredient quantity="2"
+    unit="teaspoons">ground turmeric</ingredient> and <ingredient
+    quantity="1" unit="teaspoon">garam masala</ingredient></group> to
+    the <ref r="add-aromatics">pan</ref> and cook 1 minute.
+  </step>
+
+  <step id="add-main" short="Add">
+    Stir <ref r="toast-spices">in</ref> the <group><name>main
+    ingredients</name>: <ingredient quantity="1" unit="cup">dried red
+    lentils</ingredient>, <ingredient quantity="1" unit="can">chopped
+    tomatoes</ingredient>, <ingredient quantity="1" unit="can">coconut
+    milk</ingredient>, and <ingredient quantity="2"
+    unit="cups">vegetable stock</ingredient></group>. Season with
+    salt and pepper.
+  </step>
+
+  <step id="simmer" short="Simmer">
+    Bring to a gentle simmer and cook 15–20 minutes, stirring
+    occasionally, until the <ref r="add-main">dahl</ref> is thick and
+    the lentils are tender.
+  </step>
+
+  <step id="finish" short="Finish">
+    Stir <ref r="simmer">in</ref> the <ingredient quantity="½"
+    unit="lemon">juice of half a lemon</ingredient> and <ingredient
+    quantity="2" unit="handfuls">fresh spinach</ingredient> until the
+    spinach wilts.
+  </step>
+
+  <step id="serve" short="Serve">
+    Serve the <ref r="finish">dahl</ref> warm with rice, naan, or
+    poppadoms. It freezes well for later meals.
+  </step>
+
+  <xhtml:p>Adapted from the original <xhtml:a
+  href="https://veggiedesserts.com/red-lentil-dahl/">Veggie Desserts
+  recipe</xhtml:a>.</xhtml:p>
+
+</recipe>

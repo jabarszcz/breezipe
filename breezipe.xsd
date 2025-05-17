@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+    xml:lang="en"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:br="http://jabarsz.cz/Breezipe"
+    targetNamespace="http://jabarsz.cz/Breezipe">
+
+  <annotation>
+    <documentation>
+      Jean‑Alexandre Barszcz’s Recipe schema.
+
+      This schema, together with the accompanying XSL transforms, is
+      an experiment designed to present the dependencies between the
+      steps of a recipe (see `step-table.xsl`). These dependencies are
+      the primary focus of the model below; additional features may be
+      added later.
+
+      The top-level elements are `recipe` and `recipes`, the latter
+      allowing a recipe to be divided into multiple parts.
+
+      Because the primary export target is XHTML, the schema permits
+      embedded XHTML elements.
+    </documentation>
+    <documentation>
+      Copyright 2026 Jean-Alexandre Barszcz. MIT license:
+
+      Permission is hereby granted, free of charge, to any person
+      obtaining a copy of this software and associated documentation
+      files (the "Software"), to deal in the Software without
+      restriction, including without limitation the rights to use,
+      copy, modify, merge, publish, distribute, sublicense, and/or
+      sell copies of the Software, and to permit persons to whom the
+      Software is furnished to do so, subject to the following
+      conditions:
+
+      The above copyright notice and this permission notice shall be
+      included in all copies or substantial portions of the Software.
+
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+      EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+      OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+      HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+      WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+      FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+      OTHER DEALINGS IN THE SOFTWARE.
+    </documentation>
+  </annotation>
+
+  <import
+      namespace="http://www.w3.org/XML/1998/namespace"
+      schemaLocation="http://www.w3.org/2001/xml.xsd" />
+
+  <import
+      namespace="http://www.w3.org/1999/xhtml"
+      schemaLocation="http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd"/>
+
+  <element name="recipes">
+    <annotation><documentation>
+      The root element 'recipes' is useful for recipes that can be
+      subdivided in sub-recipes. For example, for a pastry dough and
+      its filling, or a dish and its sauce, etc.
+    </documentation></annotation>
+    <complexType>
+      <sequence>
+        <element ref="br:name" minOccurs="0" />
+        <group ref="xhtml:xhtml.Flow.mix"
+               minOccurs="0" maxOccurs="unbounded" />
+        <sequence maxOccurs="unbounded">
+          <element ref="br:recipe" />
+          <group ref="xhtml:xhtml.Flow.mix"
+                 minOccurs="0" maxOccurs="unbounded" />
+        </sequence>
+      </sequence>
+      <attribute name="name" type="string" />
+      <attribute ref="xml:lang" />
+    </complexType>
+  </element>
+
+  <element name="recipe">
+    <annotation><documentation>
+      This main root element 'recipe' essentially consist of a name
+      and a list of steps, potentially interleaved with some xhtml.
+    </documentation></annotation>
+    <complexType>
+      <sequence>
+        <element ref="br:name" minOccurs="0" />
+        <group ref="xhtml:xhtml.Flow.mix"
+               minOccurs="0" maxOccurs="unbounded" />
+        <element ref="br:step" maxOccurs="unbounded" />
+        <group ref="xhtml:xhtml.Flow.mix" minOccurs="0"
+               maxOccurs="unbounded" />
+      </sequence>
+      <attribute name="id" type="ID" />
+      <attribute name="name" type="string" />
+      <attribute ref="xml:lang" />
+    </complexType>
+  </element>
+
+  <complexType name="name-like" mixed="true">
+    <annotation><documentation>
+      The names of elements describe these elements in-place (ex. the
+      recipe name as an XHTML heading), as well as in reference (using
+      the 'ref' element).
+
+      Since named elements are also link targets, and the names appear
+      in the link text, they can contain text and any XHTML that is
+      allowed in XHTML anchors (inline XHTML except other anchors).
+
+      Some elements are 'name-like' (ingredients, refs, results) and
+      their content directly equate to their name. Others contain more
+      elements/structure (recipe, step, group), so their name appears
+      under the name-like 'name' element.
+    </documentation></annotation>
+    <group ref="xhtml:xhtml.InlNoAnchor.mix" maxOccurs="unbounded" />
+  </complexType>
+
+  <element name="name" type="br:name-like" />
+
+  <element name="step">
+    <annotation><documentation>
+      Steps represent one action with inputs and outputs. The step
+      element represents its own main result (or output) and can be
+      given an identifier attribute 'id' for reference. Secondary
+      results are noted with the 'result' element. Inputs include
+      (optionally grouped) ingredients, and references to other steps
+      (main output), their (secondary) results, or other identified
+      recipes (when a top-level 'recipes' element is used).
+
+      A short name (attribute 'short') describes the step concisely; a
+      verb is recommended, ex.: "Infuse", or "Mix".
+
+      For the purposes of the summary step-table, all steps except the
+      last one should be referenced exactly once. The last step
+      represents the result of its recipe and is implicitly the root
+      of the recipe's dependency tree.
+    </documentation></annotation>
+    <complexType mixed="true">
+      <sequence>
+        <choice maxOccurs="unbounded">
+          <element ref="br:ingredient" />
+          <element ref="br:group" />
+          <element ref="br:ref" />
+          <element ref="br:result" />
+          <group ref="xhtml:xhtml.BlkNoForm.mix" />
+        </choice>
+        <element ref="br:name" minOccurs="0" />
+      </sequence>
+      <attribute name="id" type="ID" />
+      <attribute name="short" type="string" />
+      <attribute name="name" type="string" />
+    </complexType>
+  </element>
+
+  <element name="ingredient">
+    <complexType mixed="true">
+      <complexContent>
+        <extension base="br:name-like">
+          <sequence>
+            <element ref="br:note" minOccurs="0" />
+          </sequence>
+          <attribute name="quantity" type="string" />
+          <attribute name="unit" type="string" />
+          <attribute name="note" type="string" />
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+
+  <element name="note" type="br:inline" />
+
+  <complexType name="inline" mixed="true">
+    <group ref="xhtml:xhtml.Inline.mix" maxOccurs="unbounded" />
+  </complexType>
+
+  <element name="group">
+    <annotation><documentation>
+      This element serves to group ingredients together with
+      (optionally) a name.
+    </documentation></annotation>
+    <complexType mixed="true">
+      <sequence>
+        <element ref="br:name" minOccurs="0" />
+        <element ref="br:ingredient" maxOccurs="unbounded" />
+      </sequence>
+      <attribute name="name" type="string" />
+    </complexType>
+  </element>
+
+  <element name="ref">
+    <annotation><documentation>
+      References appear in recipe steps to signify that the step uses
+      the referred element and also depends on its completion to
+      begin.
+
+      Reference targets must have the corresponding ID. They include:
+      other sub-recipes under the same 'recipes' element, steps (a
+      referenced step represents its main product) and results
+      (secondary products of steps).
+
+      All elements should only be referenced once for the summarizing
+      step-table to build correctly.
+    </documentation></annotation>
+    <complexType mixed="true">
+      <complexContent>
+        <extension base="br:name-like">
+          <attribute name="r" type="IDREF" />
+          <attribute name="quantity" type="string" />
+          <attribute name="unit" type="string" />
+          <attribute name="note" type="string" />
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+
+  <element name="result">
+    <annotation><documentation>
+      This element represents a secondary result of a step (which
+      represents its own main result). It must have an ID which should
+      be referenced exactly once.
+    </documentation></annotation>
+    <complexType mixed="true">
+      <complexContent>
+        <extension base="br:name-like">
+          <attribute name="id" type="ID" use="required" />
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+
+</schema>

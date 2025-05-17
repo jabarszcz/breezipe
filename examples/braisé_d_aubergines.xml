@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xslt-param name="css" select="'../recipe.css'"?>
+<?xml-stylesheet type="text/xsl" href="../breezipe-xhtml.xsl"?>
+<recipe
+    xml:lang="fr-CA"
+    xmlns="http://jabarsz.cz/Breezipe"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jabarsz.cz/Breezipe
+                        ../breezipe.xsd">
+
+  <name>Braisé d’aubergines, pois chiches, érable et harissa</name>
+
+  <step id="legumes-revenus" short="Dorer">
+    Verser l'<ingredient quantity="¼" unit="tasse">huile
+    d'olive</ingredient> dans une cocotte chaude, et y faire revenir
+    les <group><name>légumes</name>: <ingredient quantity="1
+    grosse">aubergine<note>coupées en gros cubes</note></ingredient>,
+    <ingredient quantity="2">oignons
+    rouges<note>émincés</note></ingredient>, <ingredient quantity="1"
+    unit="tasse">carottes <note>en petits dés</note></ingredient>,
+    <ingredient quantity="2">poivrons rouges<note>en
+    lanières</note></ingredient> </group>.
+  </step>
+
+  <step id="aromatises" short="Aromatiser">
+    Ajouter aux <ref r="legumes-revenus">légumes</ref> les
+    <group><name>aromates</name>: <ingredient quantity="3">gousses
+    d’ail<note>pressées</note></ingredient>, <ingredient quantity="1"
+    unit="c. à thé">paprika</ingredient>, <ingredient quantity="1"
+    unit="c. à thé">curcuma</ingredient>, <ingredient quantity="1"
+    unit="c. à thé">coriandre moulue</ingredient>, <ingredient
+    quantity="2" unit="c. à thé">origan séché</ingredient>,
+    <ingredient quantity="½" unit="c. à thé">cumin</ingredient>,
+    <ingredient quantity="1">bâton de cannelle</ingredient>,
+    <ingredient quantity="2">feuilles de laurier</ingredient>,
+    <ingredient quantity="1 ½" unit="c. à soupe">sauce
+    harissa</ingredient> et le <ingredient quantity="1 ½" unit="c. à
+    thé">sel</ingredient></group>, puis cuire encore 2 minutes.
+  </step>
+
+  <step id="deglace" short="Déglacer">
+    Déglacer les <ref r="aromatises">légumes aromatisés</ref> avec le
+    <ingredient quantity="2" unit="c. à soupe">vinaigre de vin
+    rouge</ingredient>.
+  </step>
+
+  <step id="melange" short="Ajouter">
+    Ajouter à la <ref r="deglace">cocotte</ref> <group>le <ingredient
+    quantity="2" unit="c. à soupe">sirop d’érable</ingredient>, les
+    <ingredient quantity="1" unit="boîte de 796 ml">tomates entières
+    San Marzano</ingredient> et le <ingredient quantity="2 ½"
+    unit="tasse">bouillon de légumes</ingredient></group>.
+  </step>
+
+  <step id="mijote" short="Mijoter">
+    Porter le <ref r="melange">mélange</ref> à ébulition puis laisser
+    mijoter à feu doux pendant 1 heure en brassant de temps en temps.
+  </step>
+
+  <step id="servir" short="Servir">
+    Servir le <ref r="mijote">braisé d'aubergines</ref> avec des
+    <group><name>garnitures au choix</name>: <ingredient quantity="½"
+    unit="tasse">persil frais haché</ingredient>, <ingredient
+    quantity="½" unit="tasse">coriandre fraîche hachée</ingredient>,
+    <ingredient quantity="2">avocats<note>tranchés</note></ingredient>
+    et/ou <ingredient quantity="⅓" unit="tasse">noix de pin
+    grillées</ingredient></group>.
+  </step>
+
+  <xhtml:p>Recette tirée <xhtml:a href="https://www.kpourkatrine.com/fr/recettes/mes-recettes-derable/braise-daubergines-pois-chiches-erable-et-harissa/">du site de K pour Katrine</xhtml:a>.</xhtml:p>
+
+</recipe>
