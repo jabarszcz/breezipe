@@ -11,8 +11,8 @@
   <import href="./joy-of-cooking-style.xsl" />
   <import href="./step-table.xsl" />
   <output indent="yes" />
-  <param name="css" select="'/recipe.css'" />
-  <param name="js" select="'/highlight-crossrefd.js'" />
+  <param name="css" select="'../recipe.css'" />
+  <param name="js" select="'../highlight-crossrefd.js'" />
 
   <template match="/br:recipe|/br:recipes">
     <xhtml:html>
