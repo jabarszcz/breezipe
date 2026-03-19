@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xslt-param name="css" select="'../recipe.css'"?>
 <?xml-stylesheet type="text/xsl" href="../breezipe-xhtml.xsl"?>
 <recipe
     xml:lang="fr-CA"
