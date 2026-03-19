@@ -107,6 +107,18 @@ example file links the stylesheet directly. Open any ~.xml~ file in a
 browser - most currently support XSLT, though all major engines have
 signalled plans to remove it ([[https://developer.chrome.com/docs/web-platform/deprecating-xslt][details]]).
 
+*** With Nix
+
+A [[./flake.nix][Nix flake]] is provided. Enter the development shell or run
+targets directly:
+
+#+begin_src shell
+nix develop          # shell with all build tools
+nix build .#site     # build static site with rendered examples
+nix run .#serve      # serve the site locally on port 8080
+nix flake check      # transform and validate examples
+#+end_src
+
 *** With ~make~
 
 #+begin_src shell
@@ -115,9 +127,8 @@ make clean      # remove generated files
 make help       # list all targets
 #+end_src
 
-*Requirements:* ~xsltproc~ (libxslt). A [[./flake.nix][Nix flake]] is provided.
-Validation targets require additional tools; see the [[./Makefile][Makefile]] or the
-flake.
+*Requirements:* ~xsltproc~ (libxslt). Validation targets require
+additional tools; see the [[./Makefile][Makefile]] or the flake.
 
 *** Joy of Cooking style
 
