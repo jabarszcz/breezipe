@@ -159,8 +159,8 @@ embedded XHTML for notes, links, and formatting.
 ** Why XML?
 
 XML is polarising, but the criticism usually applies to XML used as a
-data serialisation format, a job JSON does more cleanly. For /markup/
-- annotating words inside running text - it is harder to beat.
+data serialisation format, a job JSON does more cleanly. For /markup/ -
+annotating words inside running text - it is harder to beat.
 
 
 A recipe is, at its core, a piece of text with structure embedded in
@@ -207,7 +207,7 @@ produced it. A spatial relationship is preserved.
 - [[https://cooklang.org/][Cooklang]] - a lightweight markup language for recipes; much nicer to
   hand-write than XML. Supports referencing other recipes as
   ingredients, but has no step-dependency model within a recipe.
-- [[https://github.com/mossblaser/recipe_grid][recipe_grid]] - a Python library generating ingredient-step tables
+- [[https://github.com/mossblaser/recipe_grid][=recipe_grid=]] - a Python library generating ingredient-step tables
   from a plain-text format. Also supports DAGs: steps with multiple
   outputs list them within the step cell; results referenced by
   multiple later steps are broken out into separate sub-recipe tables
