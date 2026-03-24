@@ -1,5 +1,7 @@
 #+TITLE: Breezipe - Easy recipe markup with step-dependency tables
 
+[[https://github.com/jabarszcz/breezipe][Source on GitHub]]
+
 Breezipe is a human-writable XML format for recipes. Steps declare
 their dependencies explicitly, and Breezipe uses them to generate a
 summary table that makes the recipe's flow visible at a glance.
